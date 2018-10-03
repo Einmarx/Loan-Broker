@@ -20,7 +20,7 @@ public class LoanResponse
 
     public double getRateCheckCreditScore(int creditScore, double rate)
     {
-        if (creditScore < 600)
+        if (creditScore < 48)
         {
             rate *= 1.2;
         }
