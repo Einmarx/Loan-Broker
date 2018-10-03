@@ -5,6 +5,8 @@
  */
 package loanbroker;
 
+import java.util.Scanner;
+
 /**
  *
  * @author razzthechamp
@@ -29,13 +31,24 @@ public class LoanBroker
 
     private void newLoan()
     {
+        while(true){
+        Scanner scan = new Scanner(System.in);
         System.out.println("Enter cpr: ");
-        int cpr = scan.next;
+        int cpr = scan.nextInt();
         LoanRequest.setCpr(cpr);
         System.out.println("Enter Loan Amount: ");
-        int LoanAmount = scan.next();
+        int LoanAmount = scan.nextInt();
         LoanRequest.setLoanAmount();
+        System.out.println("Enter loan time: ");
+        int loanPeriod = scan.nextInt();
+        LoanRequest.setloanPeriod();
+        System.out.println("Enter credit score: ");
+        LoanRequest.setCreditScore();
         
+        
+        break; 
+        
+                }
     }
     
 }
