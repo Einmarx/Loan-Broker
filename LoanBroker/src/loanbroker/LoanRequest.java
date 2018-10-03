@@ -45,7 +45,7 @@ public class LoanRequest
 
     public static void setCpr(int cpr)
     {
-        this.cpr = cpr;
+        //this.cpr = cpr;
     }
 
     public int getLoanPeriod()
