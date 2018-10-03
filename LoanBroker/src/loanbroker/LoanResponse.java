@@ -31,7 +31,7 @@ public class LoanResponse
     {
         if (loanAmount > 500000)
         {
-            rate *= (500000 / 100);
+            rate = 1.5;
         }
         return rate;
     }
