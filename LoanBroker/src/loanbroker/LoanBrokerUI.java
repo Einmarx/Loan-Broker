@@ -5,10 +5,7 @@
  */
 package loanbroker;
 
-/**
- *
- * @author Oliver
- */
+
 public class LoanBrokerUI
 {
     
