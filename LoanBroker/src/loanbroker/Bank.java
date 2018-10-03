@@ -18,6 +18,6 @@ public class Bank
     {
         this.request = request;
         this.response = response;
-
+        
     }
 }
