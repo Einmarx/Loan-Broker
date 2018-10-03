@@ -4,14 +4,26 @@ public class LoanResponse
 {
 
     private LoanRequest request;
-    private double rate;
+    private double rate = 0;
     // private int password;
 
  
-
-    public double getLoanYear(int loanPeriod, double rate)
+    public double getLoanAmout(int loanAmount, double rate)
     {
-        if (loanPeriod < 4)
+        if (loanAmount > 500000)
+        {
+            rate = 1.5;
+        }
+        else
+        {
+            rate = 2.5;
+        }
+        return rate;
+    }
+    
+    public double getLoanMonth(int loanPeriod, double rate)
+    {
+        if (loanPeriod < 48)
         {
             rate *= 1.7;
         }
@@ -20,20 +32,12 @@ public class LoanResponse
 
     public double getRateCheckCreditScore(int creditScore, double rate)
     {
-        if (creditScore < 48)
+        if (creditScore < 600)
         {
-            rate *= 1.2;
+            rate *= 2.2;
         }
         return rate;
     }
 
-    public double getLoanAmout(int loanAmount, double rate)
-    {
-        if (loanAmount > 500000)
-        {
-            rate = 1.5;
-        }
-        return rate;
-    }
 
 }
